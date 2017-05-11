@@ -5,7 +5,7 @@
 - [x] [React-Native开发环境搭建](http://www.jianshu.com/p/aea9323fb13e)
 - [x] [RN嵌入到现有Android原生应用](http://www.jianshu.com/p/72f2c58285da)
 - [ ] RN嵌入到现有IOS原生应用
-- [ ] RN热更新的实现(react-native-pushy、codepush)
+- [ ] RN热更新的实现(react-native-pushy、codepush、自己搭服务)
 - [ ] RN bundle的优化、工具制作(通用和业务拆分、按需记载；prepack)
 - [ ] RN组件的扩展（UI、API）
 - [ ] RN状态管理的优化（redux）
