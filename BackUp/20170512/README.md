@@ -54,3 +54,99 @@
 	//通过修改要跳转的Activity,实现不同的需求
 	Intent intent = new Intent(StartNativeActivity.this,MyRNActivity.class);
 ```
+# 使用
+
+
+
+- 新建Android项目
+
+- 在根目录添加配置文件(package.json)
+
+```
+{
+  "name": "rnandnative",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.android.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.44.0",
+    "react-navigation": "git+https://github.com/react-community/react-navigation.git"
+  }
+}
+```
+
+- npm install
+
+- 根目录加入index.android.js
+
+```
+import React, { Component } from 'react';
+import {
+    AppRegistry,
+    StyleSheet,
+    Text,
+    View,
+    NativeModules,
+} from 'react-native';
+
+export default class AwesomeProject extends Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.welcome}>
+                    Welcome to React Native!
+                </Text>
+                <Text style={styles.instructions}>
+                    To get started, edit index.android.js
+                </Text>
+                <Text style={styles.instructions}>
+                    Double tap R on your keyboard to reload,{'\n'}
+                    Shake or press menu button for dev menu
+                </Text>
+                <Text style={styles.instructions} onPress={() => this.showToast()}>
+                    点我调用原生
+                </Text>
+            </View>
+        );
+    }
+    showToast () {
+        //调用原生
+        NativeModules.RNToastAndroid.show('from native',100);
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+    },
+    welcome: {
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
+    },
+    instructions: {
+        textAlign: 'center',
+        color: '#333333',
+        marginBottom: 5,
+    },
+});
+```
+
+- 将main文件夹覆盖Android生成的main
+
+- 运行
+
+```
+	npm start
+	./gradlew installDebug
+```
