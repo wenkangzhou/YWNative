@@ -3,7 +3,6 @@
 
 
 ```
-.
 ├── AndroidManifest.xml                           //Android配置文件
 ├── assets                                        //bundle默认的访问地址
 │   ├── index.android.bundle
@@ -46,7 +45,6 @@
         ├── colors.xml
         ├── strings.xml
         └── styles.xml         
-.
 
 ```
 
