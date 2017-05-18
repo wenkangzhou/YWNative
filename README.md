@@ -8,7 +8,7 @@
 - [x] [RN调用Android原生应用方法](http://www.jianshu.com/p/5034774811ae)
 - [ ] RN调用IOS原生应用方法
 - [x] [RN热更新的实现](http://www.jianshu.com/p/961088f1647d)
-- [ ] RN bundle的优化、工具制作(通用和业务拆分、按需加载；Unbundle、prepack)
+- [ ] RN bundle的优化、工具制作(通用和业务拆分、按需加载；[Unbundle](http://www.jianshu.com/p/afc1217a53aa)、prepack)
 - [ ] RN组件的扩展（UI、API）
 - [ ] RN状态管理的优化（redux）
 - [ ] RN布局的优化（ListView的优化）
