@@ -12,6 +12,7 @@
 - [x] [RN bundle优化(Android使用Unbundle)](http://www.jianshu.com/p/afc1217a53aa)
 - [ ] RN bundle优化(IOS使用prepack)
 - [ ] RN打包工具制作
+- [ ] RN白屏优化
 - [ ] RN组件的扩展（UI、API）
 - [ ] RN状态管理的优化（redux）
 - [ ] RN布局的优化（ListView的优化）
