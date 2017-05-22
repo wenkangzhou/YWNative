@@ -178,37 +178,37 @@ public class RNUpdateBundleModule extends ReactContextBaseJavaModule {
                 mSP.edit().putString(BUNDLE_VERSION,"1.0.2").apply();
                 Activity currActivity = getCurrentActivity();
                 //两个办法都可以 只是在开启本地8081时 优先级低 所以会一直刷不出新的
-                if(currActivity != null){
-                    ((ReactApplication) currActivity.getApplication()).getReactNativeHost().clear();
-                    currActivity.unregisterReceiver(receiver);
-                    currActivity.recreate();
-                }
-//                Toast.makeText(getCurrentActivity(), "Downloading complete", Toast.LENGTH_SHORT).show()
-//                try {
-//                    ReactApplication application = (ReactApplication) getCurrentActivity().getApplication();
-//                    mReactInstanceManager = application.getReactNativeHost().getReactInstanceManager();
-//                    //builder.setJSBundleFile(bundleFile.getAbsolutePath());
-//                    Class<?> RIManagerClazz = application.getReactNativeHost().getReactInstanceManager().getClass();
-//                    Field f = RIManagerClazz.getDeclaredField("mJSCConfig");
-//                    f.setAccessible(true);
-//                    JSCConfig jscConfig = (JSCConfig)f.get(mReactInstanceManager);
-//                    Method method = RIManagerClazz.getDeclaredMethod("recreateReactContextInBackground",
-//                            JavaScriptExecutor.Factory.class, JSBundleLoader.class);
-//                    method.setAccessible(true);
-//                    method.invoke(application.getReactNativeHost().getReactInstanceManager(),
-//                            new JSCJavaScriptExecutor.Factory(jscConfig.getConfigMap()),
-//                            JSBundleLoader.createFileLoader(new File(getReactApplicationContext().getExternalCacheDir()+"/finalbundle","index.android.bundle").getAbsolutePath()));
-//                } catch (NoSuchMethodException e) {
-//                    e.printStackTrace();
-//                } catch (IllegalAccessException e) {
-//                    e.printStackTrace();
-//                } catch (InvocationTargetException e) {
-//                    e.printStackTrace();
-//                } catch (IllegalArgumentException e) {
-//                    e.printStackTrace();
-//                } catch (NoSuchFieldException e){
-//                    e.printStackTrace();
-//                }
+//                 if(currActivity != null){
+//                     ((ReactApplication) currActivity.getApplication()).getReactNativeHost().clear();
+//                     currActivity.unregisterReceiver(receiver);
+//                     currActivity.recreate();
+//                 }
+               Toast.makeText(getCurrentActivity(), "Downloading complete", Toast.LENGTH_SHORT).show();
+               try {
+                   ReactApplication application = (ReactApplication) getCurrentActivity().getApplication();
+                   mReactInstanceManager = application.getReactNativeHost().getReactInstanceManager();
+                   //builder.setJSBundleFile(bundleFile.getAbsolutePath());
+                   Class<?> RIManagerClazz = application.getReactNativeHost().getReactInstanceManager().getClass();
+                   Field f = RIManagerClazz.getDeclaredField("mJSCConfig");
+                   f.setAccessible(true);
+                   JSCConfig jscConfig = (JSCConfig)f.get(mReactInstanceManager);
+                   Method method = RIManagerClazz.getDeclaredMethod("recreateReactContextInBackground",
+                           JavaScriptExecutor.Factory.class, JSBundleLoader.class);
+                   method.setAccessible(true);
+                   method.invoke(application.getReactNativeHost().getReactInstanceManager(),
+                           new JSCJavaScriptExecutor.Factory(jscConfig.getConfigMap()),
+                           JSBundleLoader.createFileLoader(new File(getReactApplicationContext().getExternalCacheDir()+"/finalbundle","index.android.bundle").getAbsolutePath()));
+               } catch (NoSuchMethodException e) {
+                   e.printStackTrace();
+               } catch (IllegalAccessException e) {
+                   e.printStackTrace();
+               } catch (InvocationTargetException e) {
+                   e.printStackTrace();
+               } catch (IllegalArgumentException e) {
+                   e.printStackTrace();
+               } catch (NoSuchFieldException e){
+                   e.printStackTrace();
+               }
             }
         }else{//解压失败应该删除掉有问题的文件，防止RN加载错误的bundle文件
             System.out.println("解压失败");
