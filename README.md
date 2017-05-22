@@ -18,7 +18,9 @@
 - [ ] RN状态管理的优化（Redux）
 - [ ] RN布局的优化（ListView的优化）
 ## Hybrid目标能力
-- [ ] 原生应用加入webview支持
+- [ ] 原生应用加入WebView支持
+- [ ] WebView开启支持JavaScript
+- [ ] JSSDK建设
 - [ ] Hybrid的热更新
 ## 项目布局
 
