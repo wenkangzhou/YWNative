@@ -1,0 +1,8 @@
+➜  RNandNative cd diff
+➜  diff bsdiff index.android.bundle index.androidversionone.bundle bundle.patched
+➜  diff bsdiff index.android.bundle.zip index.androidversionone.bundle.zip bundle.patched
+➜  diff bspatch index.android.bundle.zip newbundle.zip bundle.patched
+➜  diff md5 newbundle.zip
+MD5 (newbundle.zip) = b93814bf4a560139bd6eaf0e69ba08e8
+➜  diff md5 index.androidversionone.bundle.zip
+MD5 (index.androidversionone.bundle.zip) = b93814bf4a560139bd6eaf0e69ba08e8
