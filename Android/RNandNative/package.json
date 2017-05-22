@@ -1,0 +1,17 @@
+{
+  "name": "rnandnative",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.android.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.44.0",
+    "react-navigation": "git+https://github.com/react-community/react-navigation.git"
+  }
+}
