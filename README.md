@@ -24,7 +24,7 @@
 
 ```
 .
-├── IOS                                          // 待完善
-├── Android                                      // 待完善
+├── IOS                                          // 详细见目录内的README
+├── Android                                      // 详细见目录内的README
 
 ```
