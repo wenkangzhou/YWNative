@@ -26,7 +26,10 @@
 
 ```
 .
-├── IOS                                          // 详细见目录内的README
-├── Android                                      // 详细见目录内的README
+├── IOS                       // 详细见目录内的README
+├── Android                   // 详细见目录内的README
+├── js(react+redux demo)      // 详细见BackUp/20170525目录内的README
 
 ```
+##停止更新
+此处停止更新，后续更新转自[Ynative](https://github.com/yued-fe/Ynative)
