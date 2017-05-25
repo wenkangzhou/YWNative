@@ -1,4 +1,4 @@
-#目录结构
+# 目录结构
 
 ```
 index.android.js                 //Android程序入口
